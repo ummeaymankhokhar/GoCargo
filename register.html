@@ -1,0 +1,148 @@
+<html>
+
+<head>
+	<title>Login and Registration Form Design</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+	<link rel="stylesheet" href="regstyle.css">
+	<link rel="stylesheet" href="navbar.css">
+	<script type="text/javascript">
+		function isNumber(evt) {
+			evt = (evt) ? evt : window.event;
+			var charCode = (evt.which) ? evt.which : evt.keyCode;
+			if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+				alert("Please Enter Only Numbers");
+				return false;
+			}
+
+			return true;
+		}
+
+		function validate() {
+			var name = document.forms["register-form"]["name"];
+			var password = document.forms["register-form"]["pass"];
+			var confirm = document.forms["register-form"]["confirm"];
+			var email = document.forms["register-form"]["email"];
+			var contact = document.forms["register-form"]["contact"];
+			if (name.value == "") {
+				window.alert("Please Enter Name");
+				name.focus();
+				return false;
+			}
+			if (password.value == "") {
+				window.alert("Please Enter Password");
+				password.focus();
+				return false;
+			}
+			if (password.value.length <= 8) {
+				window.alert("Please Enter Password Of Minimum 8 Characters");
+				password.focus();
+				return false;
+			}
+			if (confirm.value == "") {
+				window.alert("Please Confirm the Password");
+				confirm.focus();
+				return false;
+			}
+			if (password.value != confirm.value) {
+				window.alert("Passwords Do Not Match");
+				password.focus();
+				return false;
+			}
+			if (email.value == "") {
+				window.alert("Please Enter Email Id");
+				email.focus();
+				return false;
+			}
+			if (email.value.indexOf("@", 0) < 0) {
+				window.alert("Please Enter Valid Email Id");
+				email.focus();
+				return false;
+			}
+
+			if (email.value.indexOf(".", 0) < 0) {
+				window.alert("Please Enter Valid Email Id");
+				email.focus();
+				return false;
+			}
+			if (contact.value == "") {
+				window.alert("Please Enter Contact No");
+				contact.focus();
+				return false;
+			}
+			if (contact.value.length != 10) {
+				window.alert("Phone number must be 10 digits.");
+				contact.focus();
+				return false;
+			}
+
+		}
+	</script>
+
+</head>
+
+<body>
+	<div class="topnav" id="myTopnav">
+		<img src="gocargo.png" alt="">
+		<a href="index.html">Home</a>
+		<a href="services.html">Services</a>
+		<a href="About.html">About-Us</a>
+		<a href="reach.html">Reach-Us</a>
+		<a href="contact.html">Contact-Us</a>
+		<div class="dropdown">
+			<p class="dropbtn">Our Vehicles
+				<i class="fa fa-caret-down"></i>
+			</p>
+			<div class="dropdown-content">
+				<a href="sveh.html">Light Vehicles</a>
+				<a href="mveh.html">Medium Vehicles</a>
+				<a href="lveh.html">Heavy Vehicles</a>
+			</div>
+		</div>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+
+	<div class="login-page">
+		<div class="form" class="booking-page" name="booking-form" method="POST" action="register.php">
+			<form class="register-form" name="register-form" onsubmit="return validate();" method="post" action="#">
+				<input type="text" name="name" placeholder="User Name/Company name" />
+				<input type="password" name="pass" placeholder="Password" />
+				<input type="password" name="confirm" placeholder="Confirm Password" />
+				<input type="email" name="email" placeholder="Email Id" />
+				<input id="txtPhoneNo" name="contact" type="text" onkeypress="return isNumber(event)"
+					placeholder="Contact No" />
+				<button type="submit" formaction="register.php" href="booking.html">Create</button>
+				<p class="message"> Already Registered? <a href="#">Login</a>
+				</p>
+			</form>
+			<form class="login-form" method="POST">
+				<input type="text" placeholder="User name" name="name" required/>
+				<input type="password" placeholder="password" name="pass" required/>
+				<button href="booking.html" type="submit" formaction="login.php">Login</button>
+				<p class="message">Not Registered? <a href="#">Register</a></p>
+			</form>
+		</div>
+
+
+		<script src='https://code.jquery.com/jquery-3.4.1.min.js'>
+		</script>
+		<script>
+			$('.message a').click(function () {
+				$('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+			});
+		</script>
+	</div>
+	</div>
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
+</body>
+
+</html>

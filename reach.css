@@ -1,0 +1,18 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('');
+    background-size: cover;
+}
+
+.heading{
+    margin-top: 5%;
+    text-align: center;
+}
+
+#maps{
+    text-align: center;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="booking.css">
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript">
+        function isNumber(evt) {
+        evt = (evt) ? evt : window.event;
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        alert("Please Enter Only Numbers");
+        return false;
+        }
+        return true;
+        }
+        
+        function validate(){
+            var name=document.forms["booking-form"]["name"];
+            var email=document.forms["booking-form"]["email"];
+            var contact=document.forms["booking-form"]["contact"];
+            var message=document.forms["booking-form"]["message"];
+            var mess=document.forms["booking-form"]["mess"];
+            var lugg=document.forms["booking-form"]["lugg"];
+            var addi=document.forms["booking-form"]["addi"];
+            if(name.value=="")
+            {
+        
+                window.alert("Please Enter Name");
+                name.focus();
+	            return false;
+            }
+            
+
+            if(email.value=="")
+	        {
+	            window.alert("Please Enter Email Id");
+	            email.focus();
+	            return false;
+	        }
+	        if(email.value.indexOf("@",0)<0)
+	        {
+	            window.alert("Please Enter Valid Email Id");
+	            email.focus();
+	            return false;
+	        }
+	
+	        if(email.value.indexOf(".",0)<0)
+	        {
+	            window.alert("Please Enter Valid Email Id");
+	            email.focus();
+	            return false;
+	        }
+	        if(contact.value=="")
+	        {
+	            window.alert("Please Enter Contact No");
+	            contact.focus();
+	            return false;
+	        }
+            if(contact.value.length != 10) 
+            {
+            window.alert("Phone number must be 10 digits.");
+            contact.focus();
+            return false;
+            }
+
+            if(message.value=="")
+            {
+        
+                window.alert("Please enter valid loading location.");
+                message.focus();
+	            return false;
+            }
+            if(mess.value=="")
+            {
+        
+                window.alert("Please enter valid unloading location.");
+                mess.focus();
+	            return false;
+            }
+            if(lugg.value=="")
+            {
+        
+                window.alert("Please enter type of luggage.");
+                lugg.focus();
+	            return false;
+            }
+            if(addi.value=="")
+            {
+        
+                window.alert("Please enter additional care.");
+                addi.focus();
+	            return false;
+            }
+            
+            
+        }
+        
+        </script>
+
+        
+        
+        <script>
+        function testButton (form){
+            alert (form.check1.checked);
+        }
+        $(document).ready(function(){
+            $("select.vehicles").change(function(){
+                var selectedvehicles = $(this).children("option:selected").val();
+                alert("You have selected the vehicle - " + selectedvehicles);
+            });
+        });
+        </script>
+    </head>
+    
+    <body>
+        <div class="bgimage">
+            <div class="booking">
+                <h1> booking form</h1>
+                <div class="form">
+                    <form class="booking-page" name="booking-form" onsubmit="return validate();" method="post" action="booking.php">
+                        <h4>Name:</h4>
+                        <input type="text" name="name" placeholder="User Name/Company name"/> 
+                        <h4>Email:</h4>
+                        <input type="email" name="email" placeholder="Email Id"/>
+                        <h4>Phone Number:</h4>
+                        <input id="txtPhoneNo" name="contact" type="text" onkeypress="return isNumber(event)" placeholder="Contact No" />
+                        <h4>loading location:</h4> 
+                        <textarea type="text" name="message" maxlength="500" placeholder="Loading adress"></textarea>
+                        <h4>Unloading location:</h4> 
+                        <textarea type="text" name="mess" maxlength="590" placeholder="Unloading adress"></textarea>
+                        <h4>Type of luggage:</h4> 
+                        <textarea type="text" name="lugg" maxlength="240" placeholder="Enter type of you laugage"></textarea><br>
+
+                        <h4><label>Select Vehicle:</label></h4><br>
+                        <div class="selection">
+                            <select class="vehicles" name="veh">
+                                <option value="panel truck">Panel truck</option>
+                                <option value="Tow truck">Tow truck</option>
+                                <option value="Dump truck">Dump truck</option>
+                                <option value="box">Box truck</option>
+                                <option value="Platform truck">Platform truck</option>
+                                <option value="canopy express">Canopy express</option>
+                            </select>
+                        </div><br><br>
+
+                        <h4> Man power required at:</h4><br>
+                        <div class="checkbox">
+                            <input type="checkbox" name="check[]" Value="Check1" />
+                            <span class="check">Loading</span>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="check[]" Value="Check2" />
+                            <span class="check">Unloading</span>
+                        </div>
+                        <input type="submit" name="formSubmit" value="Confirm" />
+                        
+
+                        <h4>Additional:</h4> 
+                        <textarea name="addi" maxlength="500" placeholder="mention if any extra care or services taken"></textarea>
+                        <button type="submit" href="confirm.html">Submit</button>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

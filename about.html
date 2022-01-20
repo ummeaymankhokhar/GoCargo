@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us</title>
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- Custom Style sheet -->
+    <link rel="stylesheet" href="./styleabout.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body>
+                <div class="topnav" id="myTopnav">
+                    <img src="gocargo.png" alt="">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Services</a>
+                        <a href="about.html" class="active">About-Us</a>
+                        <a href="reach.html">Reach-Us</a>
+                        <a href="contact.html">Contact-Us</a>
+                        <div class="dropdown">
+                                <p class="dropbtn">Our Vehicles 
+                                  <i class="fa fa-caret-down"></i>
+                                </p>
+                                <div class="dropdown-content">
+                                  <a href="sveh.html">Light Vehicles</a>
+                                  <a href="mveh.html">Medium Vehicles</a>
+                                  <a href="lveh.html">Heavy Vehicles</a>
+                                </div>
+                              </div>
+                        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+                    </div>
+    <div class="container">
+        <div class="column">
+          <br><br><br>
+            <p>We at CARGO TRANSPORTATION have the desire to deliver the best service to our customers. Our topmost priority is easy communication with our customers and provide easy transportation of goods</p>
+        </div>
+        <div class="column">
+            <h1>MISSION AND VISION</h1>
+            <p>CARGO TRANSPORTATION is a diverse group of people brought together by the common realization that the transportation systems of the past can not meet the transportation needs of the future, or even the present. Our purpose is to encourage
+                the development and deployment of advanced transportation systems that will benefit society.</p>
+        </div>
+        <div class="creators">
+            <h1>Creators</h1>
+            <div class="innerBox">
+                <div class="box">
+                    <img src="ayman.jpeg" alt="">
+                    <h2>UmmeAyman Khokhar</h2>
+                    <p>Data Analyst</p>
+                </div>
+                <div class="box">
+                    <img src="faaizah.jpg" alt="">
+                    <h2>Faizaah Ansari</h2>
+                    <p>Web Developer</p>
+                </div>
+                <div class="box">
+                    <img src="jasmin.jpg" alt="">
+                    <h2>Jasmin Khan</h2>
+                    <p>Software Developer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+        </script>
+</body>
+
+</html>

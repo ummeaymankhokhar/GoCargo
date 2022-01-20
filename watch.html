@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformation, Transition and Animation</title>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: darkred;
+            transition: width 5s;
+        }
+
+        .box1:hover {
+            width: 500px;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: darkred;
+        }
+
+        .box2:hover {
+            transform: rotate(45deg);
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: custom-animation;
+            animation-duration: 9s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes custom-animation {
+            0% {
+                background-color: red;
+            }
+            33% {
+                background-color: yellow;
+            }
+            66% {
+                background-color: darkred;
+            }
+            100% {
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The Transitions Property</h1>
+    <p>Hover on the Box boy.</p>
+    <div class="box1"></div>
+    <h1>The Transformation Property</h1>
+    <p>Hover on the Box</p>
+    <div class="box2"></div>
+    <h1>Animations</h1>
+    <p>Just watch, you don't need to do anything</p>
+    <div class="box3"></div>
+</body>
+
+</html>

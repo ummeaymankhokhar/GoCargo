@@ -1,0 +1,126 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.bgimage{
+    background-image: url('optimus.jpg');
+    background-size: 50% auto;
+    background-size: cover; 
+    background-position: center;
+    
+}
+
+
+
+
+/* main body */
+
+
+.booking{
+    max-width:80%;
+    font-family: "Roboto", sans-serif;
+    color:white;
+    text-align:center;
+    padding-bottom: 50px;
+    margin: 0 10%;
+}
+
+.form{
+    top: -8%;
+	background: rgba(83, 81, 88, 0.5);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 50px;
+}
+	
+.form h4{
+    color:white;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.checkbox{
+    text-align: left !important;
+    padding-left: 80px;
+}
+
+.check{
+    font-size: 24px;
+}
+
+.selection{
+    text-align: left;
+    padding-left: 10%;
+}
+
+select{
+    font-size: 18px;
+}
+
+input[type='checkbox']{
+    font-size: 24px !important;
+    text-align: left !important;
+    width: 10% !important;
+}
+.booking h1{
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-top: 50px;;
+    padding-bottom: 50px;
+}
+.form input{
+    font-family: "Roboto", sans-serif;
+	outline: 1;
+	background: #f2f2f2;
+	width: 75%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+.form textarea{
+    font-family: "Roboto", sans-serif;
+	outline: 1;
+	background: #f2f2f2;
+    width: 75%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+    font-size: 14px;
+    resize: vertical;
+}
+.form button{
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: #4CAF50;
+	width: 75%;
+	border: 0;
+	padding: 15px;
+	color: #FFFFFF;
+	font-size: 14px;
+	cursor: pointer;
+}
+.form button:hover,.form button:active{
+	background: #43A047;
+}
+
+.form .message{
+	margin: 15px 0 0;
+	color: aliceblue;
+	font-size: 12px;
+}
+.form .message a{
+color: #4CAF50;
+text-decoration: none;
+
+}
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        .box {
+            width: 1000px;
+            height: 1000px;
+            background-color: cadetblue;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .box {
+                background-color: cyan;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .box {
+                background-color: darkcyan;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hello This Document is about Media Query.</h1>
+        <p>Resize the browser and the Color will change</p>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
+

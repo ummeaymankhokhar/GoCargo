@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+         <link rel="stylesheet" type="text/css" href="stylecontact.css">
+         <link rel="stylesheet" href="navbar.css">
+        <script type="text/javascript">
+            function isNumber(evt) {
+          evt = (evt) ? evt : window.event;
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            alert("Please Enter Only Numbers");
+            return false;
+          }
+        
+          return true;
+        }
+        
+        function validate(){
+            var name=document.forms["contact-form"]["name"];
+            var email=document.forms["contact-form"]["email"];
+            var contact=document.forms["contact-form"]["contact"];
+            var message=document.forms["contact-form"]["message"];
+           
+            if(name.value=="")
+            {
+        
+                window.alert("Please Enter Name");
+                name.focus();
+	            return false;
+            }
+
+            if(email.value=="")
+	        {
+	            window.alert("Please Enter Email Id");
+	            email.focus();
+	            return false;
+	        }
+	        if(email.value.indexOf("@",0)<0)
+	        {
+	            window.alert("Please Enter Valid Email Id");
+	            email.focus();
+	            return false;
+	        }
+	
+	        if(email.value.indexOf(".",0)<0)
+	        {
+	            window.alert("Please Enter Valid Email Id");
+	            email.focus();
+	            return false;
+	        }
+	        if(contact.value=="")
+	        {
+	            window.alert("Please Enter Contact No");
+	            contact.focus();
+	            return false;
+	        }
+            if(contact.value.length != 10) 
+            {
+            window.alert("Phone number must be 10 digits.");
+            contact.focus();
+            return false;
+            }
+
+            if(message.value=="")
+            {
+        
+                window.alert("Please enter your feedback/query.");
+                message.focus();
+	            return false;
+            }
+            
+        }
+        </script>
+    </head>
+    
+    <body>
+            
+            <div class="topnav" id="myTopnav">
+                <img src="gocargo.png" alt="">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="About.html">About-Us</a>
+                    <a href="reach.html">Reach-Us</a>
+                    <a href="contact.html" class="active">Contact-Us</a>
+                    <div class="dropdown">
+                            <p class="dropbtn">Our Vehicles 
+                              <i class="fa fa-caret-down"></i>
+                            </p>
+                            <div class="dropdown-content">
+                              <a href="sveh.html">Light Vehicles</a>
+                              <a href="mveh.html">Medium Vehicles</a>
+                              <a href="lveh.html">Heavy Vehicles</a>
+                            </div>
+                          </div>
+                    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+                </div>
+            <div class="text">
+                <h1>CONTACT US</h1><br>
+                <p>Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+            <br>
+            
+            <center>
+            <div class="form">
+                <form class="contact-page" name="contact-form" onsubmit="return validate();" method="POST" action="contact.php">
+                <h4>Name:</h4>
+                <input type="text" name="name" placeholder="User Name/Company name"/> 
+                <h4>Email:</h4>
+                <input type="email" name="email" placeholder="Email Id"/>
+                <h4>Phone Number:</h4>
+                <input id="txtPhoneNo" name="contact" type="text" onkeypress="return isNumber(event)" placeholder="Contact No" />
+                <h4>Message</h4> 
+                <textarea name="message" maxlength="500" placeholder="Query/Feedback"></textarea> <br>
+                <button type="submit" >Submit</button>
+                </form> 
+            </div></center>
+        <script>
+                function myFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+            </script>    
+           
+           
+    </body>
+</html>

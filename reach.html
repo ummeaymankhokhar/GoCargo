@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+         <link rel="stylesheet" type="text/css" href="reach.css">
+         <link rel="stylesheet" href="navbar.css">
+         <style>
+         body{
+          background-image: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('reach.jpg');
+          background-size: cover;
+          background-position: center;
+    
+          }
+         </style>
+    </head>
+    
+    <body>
+    
+    <div class="bgimage">
+            <div class="topnav" id="myTopnav">
+                <img src="gocargo.png" alt="">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About-Us</a>
+                    <a href="reach.html" class="active">Reach-Us</a>
+                    <a href="contact.html">Contact-Us</a>
+                    <div class="dropdown">
+                            <p class="dropbtn">Our Vehicles 
+                              <i class="fa fa-caret-down"></i>
+                            </p>
+                            <div class="dropdown-content">
+                              <a href="sveh.html">Light Vehicles</a>
+                              <a href="mveh.html">Medium Vehicles</a>
+                              <a href="lveh.html">Heavy Vehicles</a>
+                            </div>
+                          </div>
+                    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+                </div>
+        <div class="heading">
+            <h1><font color="white">Reach Us at below Location!!</font></h1>
+        </div>
+            <div id="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.399044046384!2d72.85202491505348!3d19.00212995922791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf02d4912c55%3A0x8e9ad50717493f43!2sRaza%20Tower%20CHS.LTD!5e0!3m2!1sen!2sin!4v1571040128008!5m2!1sen!2sin" width="80%" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </div>
+        <script>
+                function myFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+            </script>
+    </body>
+
+
+</html>
